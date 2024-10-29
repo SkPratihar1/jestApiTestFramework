@@ -21,4 +21,4 @@ RUN npm run build
 RUN mkdir -p test-reports/html-report test-reports/junit test-reports/jest-stare coverage
 
 # Run Jest tests with reports and upload script
-CMD ["npm", "run", "test:report"]
+CMD ["npm", "run", "test:CI"]
