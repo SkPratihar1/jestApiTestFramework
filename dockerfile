@@ -15,7 +15,7 @@ COPY . .
 RUN apt-get update && apt-get install -y awscli
 
 # Compile TypeScript
-RUN npm run build
+#RUN npm run build
 
 # Ensure report directories exist
 RUN mkdir -p test-reports/html-report test-reports/junit test-reports/jest-stare coverage
