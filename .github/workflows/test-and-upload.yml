@@ -1,10 +1,11 @@
 name: Test and Upload Report
 
 on:
-  push:
-    branches: [ master ]
   pull_request:
-    branches: [ master ]
+    branches:
+      - master  # Triggers when a pull request is made against the main branch
+  schedule:
+    - cron: '0 0 * * *'  # Runs daily at midnight UTC
 
 jobs:
   test_and_upload:
@@ -27,9 +28,6 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-
-      - name: Compile TypeScript
-        run: npm run build
 
       - name: Build Docker image
         run: docker build -t jest-api-test .
