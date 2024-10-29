@@ -14,11 +14,9 @@ COPY . .
 # Install AWS CLI for S3 uploads
 RUN apt-get update && apt-get install -y awscli
 
-# Compile TypeScript
-RUN npm run build
 
 # Ensure report directories exist
 RUN mkdir -p test-reports/html-report test-reports/junit test-reports/jest-stare coverage
 
 # Run Jest tests with reports and upload script
-CMD ["npm", "run", "test:report"]
+CMD ["npm", "run", "test:CI"]
