@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "report": "open /Users/it062305/dev/automationframework/apiAutomation/.html-report/report.html",
-    "test:ci": "jest --runInBand"
+    "test:ci": "jest --ci --reporters=jest-junit --reporters=default",
+    "test:c": "jest --runInBand"
   },
   "keywords": [],
   "author": "",

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="4" failures="0" errors="0" time="22.604">
+  <testsuite name="Login Tests" errors="0" failures="0" skipped="0" timestamp="2024-10-30T05:05:49" time="21.421" tests="2">
+    <testcase classname="Login Tests Should login successfully with valid USER credentials" name="Login Tests Should login successfully with valid USER credentials" time="1.03">
+    </testcase>
+    <testcase classname="Login Tests Should login successfully with valid ADMIN credentials" name="Login Tests Should login successfully with valid ADMIN credentials" time="0.616">
+    </testcase>
+  </testsuite>
+  <testsuite name="Login Tests" errors="0" failures="0" skipped="0" timestamp="2024-10-30T05:05:49" time="21.565" tests="2">
+    <testcase classname="Login Tests Should login successfully with valid USER credentials" name="Login Tests Should login successfully with valid USER credentials" time="1.061">
+    </testcase>
+    <testcase classname="Login Tests Should login successfully with valid ADMIN credentials" name="Login Tests Should login successfully with valid ADMIN credentials" time="0.727">
+    </testcase>
+  </testsuite>
+</testsuites>

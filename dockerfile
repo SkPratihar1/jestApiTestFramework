@@ -19,4 +19,4 @@ RUN apt-get update && apt-get install -y awscli
 RUN mkdir -p test-reports/html-report test-reports/junit test-reports/jest-stare coverage
 
 # Run Jest tests with reports and upload script
-CMD ["npm", "run", "test:CI"]
+CMD ["npm", "run", "test"]
