@@ -81,7 +81,7 @@ async function login(username: string, password: string, app: string): Promise<{
   try {
    
     const response = await apiInstance.post('/api/login', loginPayload);
-    console.log(response)
+    //console.log(response)
     const { data, message, success } = response.data;
 
     // Check if the login was successful

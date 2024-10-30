@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="4" failures="0" errors="0" time="12.763">
-  <testsuite name="Login Tests" errors="0" failures="0" skipped="0" timestamp="2024-10-29T07:54:26" time="6.244" tests="2">
-    <testcase classname="Login Tests Should login successfully with valid USER credentials" name="Login Tests Should login successfully with valid USER credentials" time="0.735">
+<testsuites name="jest tests" tests="4" failures="0" errors="0" time="12.352">
+  <testsuite name="Login Tests" errors="0" failures="0" skipped="0" timestamp="2024-10-30T05:07:45" time="7.036" tests="2">
+    <testcase classname="Login Tests Should login successfully with valid USER credentials" name="Login Tests Should login successfully with valid USER credentials" time="0.738">
     </testcase>
-    <testcase classname="Login Tests Should login successfully with valid ADMIN credentials" name="Login Tests Should login successfully with valid ADMIN credentials" time="0.717">
+    <testcase classname="Login Tests Should login successfully with valid ADMIN credentials" name="Login Tests Should login successfully with valid ADMIN credentials" time="0.587">
     </testcase>
   </testsuite>
-  <testsuite name="Login Tests" errors="0" failures="0" skipped="0" timestamp="2024-10-29T07:54:32" time="6.289" tests="2">
-    <testcase classname="Login Tests Should login successfully with valid USER credentials" name="Login Tests Should login successfully with valid USER credentials" time="0.633">
+  <testsuite name="Login Tests" errors="0" failures="0" skipped="0" timestamp="2024-10-30T05:07:45" time="11.751" tests="2">
+    <testcase classname="Login Tests Should login successfully with valid USER credentials" name="Login Tests Should login successfully with valid USER credentials" time="0.735">
     </testcase>
-    <testcase classname="Login Tests Should login successfully with valid ADMIN credentials" name="Login Tests Should login successfully with valid ADMIN credentials" time="0.594">
+    <testcase classname="Login Tests Should login successfully with valid ADMIN credentials" name="Login Tests Should login successfully with valid ADMIN credentials" time="0.666">
     </testcase>
   </testsuite>
 </testsuites>
