@@ -4,9 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage && ts-node ./src/lib/uploadReportsToS3.ts",
     "report": "open /Users/it062305/dev/automationframework/apiAutomation/.html-report/report.html",
-    "test:ci": "jest --runInBand"
+    "test:ci": "jest --ci --reporters=jest-junit --reporters=default",
+    "test:SE": "jest --runInBand && ts-node ./src/lib/uploadReportsToS3.ts",
+    "upload":"ts-node ./src/lib/uploadReportsToS3.ts"
   },
   "keywords": [],
   "author": "",

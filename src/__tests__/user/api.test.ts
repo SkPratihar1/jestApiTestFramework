@@ -31,7 +31,7 @@ describe("Login Tests", () => {
   
         // Call the login function and expect the response
         const loginResponse = await login(email, password, headers.app); 
-        console.log(`${userType} login `,loginResponse)
+        //console.log(`${userType} login `,loginResponse)
         expect(loginResponse).toBeDefined(); // Expect the response to be defined
         expect(loginResponse.accessToken).toBeDefined(); // Check that the token is present
       });

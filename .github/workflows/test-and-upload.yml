@@ -1,21 +1,17 @@
-name: Test and Upload Report
+
+name: Daily CI Pipeline
 
 on:
-  pull_request:
+  push:
     branches:
-      - master  # Triggers when a pull request is made against the main branch
+      - master
+
   schedule:
-    - cron: '0 0 * * *'  # Runs daily at midnight UTC
+    - cron: '0 0 * * *' # Runs every day at 12:00 AM UTC
 
 jobs:
-  test_and_upload:
+  build:
     runs-on: ubuntu-latest
-
-    env:
-      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      AWS_DEFAULT_REGION: 'us-east-1'
-      S3_BUCKET_NAME: 'jest-report'
 
     steps:
       - name: Checkout code
@@ -29,13 +25,9 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build Docker image
-        run: docker build -t jest-api-test .
-
       - name: Run tests and upload reports
-        run: docker run \
-          -e AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }} \
-          -e AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }} \
-          -e AWS_DEFAULT_REGION=us-east-1 \
-          -e S3_BUCKET_NAME=jest-report \
-          jest-api-test
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
+        run: npm run test

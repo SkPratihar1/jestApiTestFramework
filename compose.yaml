@@ -1,0 +1,11 @@
+
+name: compose-api-automation
+
+services:
+  test-runner:
+    container_name: container-test-runner
+    image: test-runner:latest
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      no_cache: true
